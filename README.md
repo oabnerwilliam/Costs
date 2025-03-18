@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Projeto Costs - Controle de Despesas Pessoais
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Descrição
 
-## Available Scripts
+O Costs é uma aplicação desenvolvida com React para ajudar usuários a controlar suas despesas pessoais. O sistema permite adicionar despesas, categorizar, visualizar o total gasto e filtrar as despesas por categoria e data.
 
-In the project directory, you can run:
+## Tecnologias Utilizadas
 
-### `npm start`
+* React: Biblioteca JavaScript para construção da interface de usuário e gerenciamento de estado.
+* CSS: Estilização da interface.
+* JavaScript: Linguagem usada para manipulação de dados e lógica de negócios.
+* LocalStorage (se implementado): Para persistir as despesas entre sessões.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Funcionalidades
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Adicionar Despesas:** O usuário pode cadastrar novas despesas com valores, categorias e datas.
+* **Visualizar Despesas:** As despesas cadastradas ficam visíveis em uma lista, exibindo o valor, categoria e data.
+* **Filtrar Despesas:** O usuário pode filtrar as despesas por categoria ou data, facilitando a visualização de custos específicos.
+* **Cálculo do Total:** A aplicação calcula automaticamente o total gasto com base nas despesas cadastradas.
+* **Responsividade:** A interface é responsiva e funciona bem em diferentes tamanhos de tela, incluindo dispositivos móveis.
 
-### `npm test`
+## Como Rodar o Projeto
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Pré-requisitos
 
-### `npm run build`
+* Node.js (versão 14 ou superior)
+* npm (gerenciador de pacotes)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Passos
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.  Clone o repositório:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    git clone [https://github.com/seu-usuario/costs.git](https://github.com/seu-usuario/costs.git)
+    ```
 
-### `npm run eject`
+2.  Acesse o diretório do projeto:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    cd costs
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.  Instale as dependências:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    ```bash
+    npm install
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4.  Rode o projeto localmente:
 
-## Learn More
+    ```bash
+    npm start
+    ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    Isso abrirá o projeto no navegador em `http://localhost:3000`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Como Contribuir
 
-### Code Splitting
+1.  Faça um fork deste repositório.
+2.  Crie uma branch para a sua feature (`git checkout -b minha-feature`).
+3.  Faça as modificações desejadas.
+4.  Adicione as modificações ao staging (`git add .`).
+5.  Faça o commit das alterações (`git commit -m 'Adiciona nova funcionalidade'`).
+6.  Envie para o repositório remoto (`git push origin minha-feature`).
+7.  Abra um Pull Request para a branch principal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Licença
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
