@@ -1,21 +1,19 @@
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+
 import Home from './components/pages/Home'
 import Company from './components/pages/Company'
-import Contact from './components/pages/Contact';
-import NewProject from './components/pages/NewProject';
-import styles from './components/layout/App.module.css'
-import Container from './components/layout/Container';
+import Contact from './components/pages/Contact'
+import NewProject from './components/pages/NewProject'
+
+import Container from './components/layout/Container'
+import Navbar from './components/layout/Navbar'
+import Footer from './components/layout/Footer'
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <ul className={styles.menu}>
-          <Link to="/" className={styles.botao}>Início</Link>
-          <Link to="company" className={styles.botao}>Empresa</Link>
-          <Link to="contact" className={styles.botao}>Contato</Link>
-          <Link to="newproject" className={styles.botao}>Novo Projeto</Link>
-        </ul>
+        <Navbar/>
         <Container customClass="min-height">
           <Routes>
             <Route path="/" element={<Home/>} />
@@ -24,10 +22,10 @@ function App() {
             <Route path="newproject" element={<NewProject/>} />
           </Routes>
         </Container>  
-        <p>Footer</p>
+        <Footer/>
       </Router>
     </div>
   );
 }
 
-export default App;
+export default App
