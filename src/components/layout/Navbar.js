@@ -15,6 +15,9 @@ function Navbar() {
                         <Link to="/">Início</Link>
                     </li>
                     <li>
+                        <Link to="projects">Projetos</Link>
+                    </li>
+                    <li>
                         <Link to="company" >Empresa</Link>
                     </li>
                     <li>
