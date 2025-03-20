@@ -1,0 +1,26 @@
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 3em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.socialList {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+.socialList li {
+    font-size: 1.5em;
+    &:hover {
+        color: gold;
+        cursor: pointer;
+    }
+}
+.copy {
+    font-weight: bold;
+    color: gold;
+}
