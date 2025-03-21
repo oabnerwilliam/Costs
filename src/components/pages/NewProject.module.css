@@ -1,0 +1,12 @@
+.newproject_container {
+    width: 450px;
+    margin: 0 auto;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.newproject_container p {
+    color: #7b7b7b;
+}
