@@ -10,3 +10,16 @@
         color: gold;
     }
 }
+
+.btnGold {
+    color: black;
+    background-color: gold;
+    padding: 1em;
+    text-decoration: none;
+    transition: 0.5s ease;
+    &:hover {
+        /*color: #222;
+        background-color: gold;*/
+        background-color: hsl(51, 100%, 40%);
+    }
+}

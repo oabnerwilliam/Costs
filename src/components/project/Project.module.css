@@ -1,0 +1,22 @@
+.project {
+    background-color: inherit;
+    color: black;
+    border: 1px solid hsl(0, 0%, 70%);
+    width: 100%;
+    text-align: center;
+    margin: 0 auto; 
+    padding: 3em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    font-size: .9em;
+    transition: all ease 0.3s;
+    text-decoration: none;
+}
+.project:hover {
+    background-color: hsl(0, 0%, 80%);
+    border: 1px solid hsl(0, 0%, 80%);
+    cursor: pointer;
+}

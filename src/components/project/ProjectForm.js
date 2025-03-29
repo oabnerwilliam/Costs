@@ -19,10 +19,16 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
     })
       .then((resp) => resp.json())
       .then((data) => {
-        setCategories(data)
+        //setCategories(data)
+        handleSetCategories(data)
       })
       .catch((err) => console.log(err))
   }, [])
+
+//TODO: descobrir o real motivo de usar os handlers
+  const handleSetCategories = (item) =>{
+    setCategories(item)
+  }
 
   const submit = (e) => {
     e.preventDefault()

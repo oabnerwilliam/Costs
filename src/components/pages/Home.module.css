@@ -26,3 +26,8 @@
     width: 350px;
     margin: 2em 0;
 }
+
+.home_container div {
+    display: flex;
+    gap: 1em;
+}

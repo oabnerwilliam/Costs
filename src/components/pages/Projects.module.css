@@ -1,0 +1,10 @@
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    margin: 1em;
+    padding: 2em;
+}
