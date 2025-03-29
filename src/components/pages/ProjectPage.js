@@ -42,7 +42,7 @@ function ProjectPage() {
     return (
         <div className={style.project}>
             <h1>{project.name}</h1>
-            <p>Categoria: {project.category?.name||"Carregando"}</p>
+            <p>Categoria: {project.category?.name||""}</p>
             <p>Orçamento: {project.budget}</p>
         </div>
     )
