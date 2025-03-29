@@ -23,6 +23,8 @@ const Projects = () => {
       .catch((err) => console.log(err))
   }, [])
 
+  projects.sort((a, b)=>b.id-a.id)
+
   return(
     <div className={style.projects}>
       <h1>Projetos</h1>
