@@ -15,10 +15,10 @@ function Navbar() {
                         <Link to="/">Início</Link>
                     </li>
                     <li>
-                        <Link to="projects">Projetos</Link>
+                        <Link to="newproject">Novo Projeto</Link>
                     </li>
                     <li>
-                        <Link to="newproject">Novo Projeto</Link>
+                        <Link to="projects">Projetos</Link>
                     </li>
                     {/* <li>
                         <Link to="company" >Empresa</Link>
