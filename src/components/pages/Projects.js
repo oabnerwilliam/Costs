@@ -29,7 +29,7 @@ const Projects = () => {
   return(
     <div className={style.projects}>
       <h1>Meus Projetos</h1>
-      <Message msg="Mensagem de teste"/>
+      <Message msg="&#10003; Projeto criado com sucesso!" type="success"/>
       {projects.length > 0 ? (
         projects.map((project)=>(
           <Project item={project} key={project.id}/>

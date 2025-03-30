@@ -1,9 +1,10 @@
 import React from 'react'
+import style from './Message.module.css'
 
 function Message({type, msg}) {
   return (
     <>
-        <p>{msg}</p>
+        <p className={`${style.message} ${style[type]}`}>{msg}</p>
     </>
   )
 }
