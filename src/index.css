@@ -8,3 +8,7 @@ body, html, #root {
   height: 100vh;
   background-color: #EFEFEF;
 }
+::selection {
+  background-color: black;
+  color: gold
+}
