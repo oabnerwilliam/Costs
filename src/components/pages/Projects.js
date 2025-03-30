@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Project from '../project/Project'
 import style from './Projects.module.css'
+import Message from '../layout/Message'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
@@ -27,7 +28,8 @@ const Projects = () => {
 
   return(
     <div className={style.projects}>
-      <h1>Projetos</h1>
+      <h1>Meus Projetos</h1>
+      <Message msg="Mensagem de teste"/>
       {projects.length > 0 ? (
         projects.map((project)=>(
           <Project item={project} key={project.id}/>
