@@ -37,12 +37,12 @@ function NewProject() {
     })
       .then(resp => resp.json())
       .then((data)=> {
-        console.log(data)
         const newId = idCounter + 1
         setIdCounter(newId)
         updateIdCounter(newId)
         //redirect
-        navigate("/projects", {message: 'Projeto criado com sucesso!'})
+        const state = {message: 'Projeto criado com sucesso!'}
+        navigate("/projects", {state})
       })
       .catch(error => console.log(error))
   }

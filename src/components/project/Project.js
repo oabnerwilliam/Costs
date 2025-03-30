@@ -4,10 +4,6 @@ import { Navigate, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 function Project({ item }) {
-  useEffect(()=>{
-    console.log(item)
-  },[])
-  
   const navigate = useNavigate()
 
   return (

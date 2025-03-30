@@ -2,8 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Project from '../project/Project'
 import style from './Projects.module.css'
 import Message from '../layout/Message'
+import { useLocation } from 'react-router-dom'
 
 const Projects = () => {
+  let message = ""
+  const location = useLocation()
+  if(location.state) {
+    message = location.state.message
+  }
+  
   const [projects, setProjects] = useState([])
   
   const handleSetProjects = (projects) => {
@@ -29,7 +36,11 @@ const Projects = () => {
   return(
     <div className={style.projects}>
       <h1>Meus Projetos</h1>
-      <Message msg="&#10003; Projeto criado com sucesso!" type="success"/>
+      {message && (
+        <Message
+        msg={message}
+        type="success"/>  
+      )}
       {projects.length > 0 ? (
         projects.map((project)=>(
           <Project item={project} key={project.id}/>
