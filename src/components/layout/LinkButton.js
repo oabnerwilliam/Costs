@@ -5,15 +5,7 @@ import styles from './LinkButton.module.css'
 function LinkButton({ to, text, color }) {
   return (
     <>
-      {
-        color=="gold" ? (
-          <Link className={styles.btnGold} to={to}>
-            {text}
-          </Link>
-        ) : (
-          <Link className={styles.btn} to={to}>{text}</Link>
-        )
-      }
+      <Link className={`${styles.btn} ${styles[color]}`} to={to}>{text}</Link>
     </>
   )
 }
