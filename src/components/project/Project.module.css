@@ -3,21 +3,37 @@
     color: black;
     border: 1px solid hsl(0, 0%, 70%);
     text-decoration: none;
-    
+    width: 100%;
+    margin: 0 auto; 
+    padding: 3em;
+    border-radius: 1em;
+    font-size: .9em;
+    transition: all ease 0.3s;
+
+    display: flex;
+    justify-content: space-between;
+}
+.project .actions {
+    justify-content: center;
+}
+.project .actions a {
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    margin: 0;
+    transition: all ease 0.3s;
+    padding: .5em;
+    border-radius: .5em;
+    &:hover {
+        background-color: white;
+        color: black;
+    }
+}
+.project div {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1em;
-
-    width: 100%;
-
-    text-align: center;
-    margin: 0 auto; 
-    padding: 3em;
-    border-radius: 1em;
-    
-    font-size: .9em;
-    transition: all ease 0.3s;
 }
 .project:hover {
     background-color: hsl(0, 0%, 80%);

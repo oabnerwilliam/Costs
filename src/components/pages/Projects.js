@@ -3,6 +3,8 @@ import Project from '../project/Project'
 import style from './Projects.module.css'
 import Message from '../layout/Message'
 import { useLocation } from 'react-router-dom'
+import { FaPlus } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Projects = () => {
   let message = ""
@@ -35,7 +37,14 @@ const Projects = () => {
 
   return(
     <div className={style.projects}>
-      <h1>Meus Projetos</h1>
+      <div className={style.title}>
+        <h1>Meus Projetos</h1>
+        <Link to="/newproject">
+          <div className={style.cobertura}></div>
+          <FaPlus/>
+          <p>Novo Projeto</p>
+        </Link>
+      </div>
       {message && (
         <Message
         msg={message}
