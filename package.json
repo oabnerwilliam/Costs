@@ -18,6 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "setup-db": "cp dbmodel.json db.json",
     "start": "concurrently \"json-server --watch db.json --port 5000\" \"react-scripts start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
