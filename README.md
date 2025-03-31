@@ -21,11 +21,6 @@ O Costs é uma aplicação desenvolvida com React para ajudar usuários a contro
 
 ## Como Rodar o Projeto
 
-### Pré-requisitos
-
-* Node.js (versão 14 ou superior)
-* npm (gerenciador de pacotes)
-
 ### Passos
 
 1.  Clone o repositório:
@@ -46,13 +41,36 @@ O Costs é uma aplicação desenvolvida com React para ajudar usuários a contro
     npm install
     ```
 
-4.  Rode o projeto localmente:
+# Instruções para Configuração do Banco de Dados
+
+## Como Configurar o Banco de Dados
+
+Antes de executar o projeto, você precisa criar o banco de dados local. Siga os passos abaixo:
+
+1.  **Execute o script de configuração do banco de dados:**
+
+    ```bash
+    npm run setup-db
+    ```
+
+    Este comando criará um arquivo `db.json` baseado no modelo definido em `dbmodel.json`.
+
+2.  **Inicie o servidor do projeto:**
 
     ```bash
     npm start
     ```
 
-    Isso abrirá o projeto no navegador em `http://localhost:3000`.
+    Este comando iniciará o servidor usando o banco de dados `db.json` que você acabou de criar, e abrirá o projeto no navegador em `http://localhost:3000`
+
+## Requisitos
+
+* Node.js e npm instalados no seu sistema.
+
+## Observações
+
+* Certifique-se de que o arquivo `dbmodel.json` esteja presente no diretório raiz do projeto.
+* O script `setup-db` utiliza o modelo em `dbmodel.json` para criar a estrutura inicial do banco de dados em `db.json`.
 
 ## Como Contribuir
 
@@ -63,7 +81,3 @@ O Costs é uma aplicação desenvolvida com React para ajudar usuários a contro
 5.  Faça o commit das alterações (`git commit -m 'Adiciona nova funcionalidade'`).
 6.  Envie para o repositório remoto (`git push origin minha-feature`).
 7.  Abra um Pull Request para a branch principal.
-
-## Licença
-
-Este projeto está licenciado sob a MIT License - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
