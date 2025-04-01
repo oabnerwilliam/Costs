@@ -28,7 +28,7 @@ function NewProject() {
     //initialize cost and services
     project.cost = 0
     project.services = []
-    project.id = idCounter
+    project.id = idCounter.toString()
 
     fetch("http://localhost:5000/projects", {
       method: "POST",

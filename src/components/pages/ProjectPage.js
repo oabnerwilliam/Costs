@@ -18,23 +18,20 @@ import Message from '../layout/Message'
 
 function ProjectPage() {
     const {id} = useParams()
-    const [projects, setProjects] = useState([])
     const [currentProject, setCurrentProject] = useState({})
     const [loading, setLoading] = useState(true)
     const [projectForm, setProjectForm] = useState(false)
     const [message, setMessage] = useState('')
+    const [errorMessage, setErrorMessage] = useState('')
 
     const location = useLocation()
 
     useEffect(()=>{
         if (location.state) {
         setProjectForm(location.state.edit)
-    }
 
-    const handleSetProjects = (item) => {
-        setProjects(item)
-    }
-    }, [])
+        console.log(id)
+    }}, [])
 
     /*useEffect(() => {
         fetch("http://localhost:5000/projects", {
@@ -71,9 +68,13 @@ function ProjectPage() {
             setCurrentProject(data)
             setLoading(false)
            })
-           .catch((err)=>console.log("Erro ao buscar projeto:", err))
+           .catch((err)=>{
+                console.log("Erro ao buscar projeto:", err)
+                setLoading(false)
+                setErrorMessage("Projeto não encontrado")
+            })
         }, 1000)
-    }, [projects, id])
+    }, [id])
 
     const showForm = () => {
         if (projectForm) {
@@ -106,11 +107,14 @@ function ProjectPage() {
                 loading ? (
                     <Loader/>
                 ) : (
-                <div className={style.project}>
+                errorMessage ? (
+                    <Message type="error" msg={errorMessage}/>
+                ) : (
+                    <div className={style.project}>
                     <div className={style.info}>
                         {
                             message && (
-                                <Message type="success" msg="Projeto editado com sucesso!"/>
+                                <Message type="success" msg={message}/>
                             )
                         }
                         <AnimatedLinkButton to="/projects" text="Ver Projetos" type="see"/>
@@ -122,7 +126,7 @@ function ProjectPage() {
                                     <p><strong>Orçamento:</strong> {currentProject.budget}</p>
                                 </div>
                             ) : (
-                                <div>
+                                <div className={style.editForm}>
                                     <h1>Editar Projeto</h1>
                                     <ProjectForm projectData={currentProject}
                                     btnText="Enviar Alterações"
@@ -143,7 +147,7 @@ function ProjectPage() {
                     </button>
                     
                 </div>
-                 
+                )
                 )
             }
         </>
