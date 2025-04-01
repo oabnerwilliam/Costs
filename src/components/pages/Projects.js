@@ -5,12 +5,14 @@ import Message from '../layout/Message'
 import { useLocation } from 'react-router-dom'
 import AnimatedLinkButton from '../layout/AnimatedLinkButton'
 import SearchInput from '../form/SearchInput'
+import Loader from '../layout/Loader'
 
 const Projects = () => {
   const [projects, setProjects] = useState([])
   const [projectMessage, setProjectMessage] = useState('')
   const [searchText, setSearchText] = useState('')
   const [isOpen, setIsOpen] = useState(false)
+  const [loading, setLoading] = useState(true)
   const searchInputRef = useRef(null)
   
   let message = ""
@@ -24,17 +26,20 @@ const Projects = () => {
   }
 
   useEffect(() => {
-    fetch("http://localhost:5000/projects", {
-      method: "GET",
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        handleSetProjects(data)
+    setTimeout(()=>{
+      fetch("http://localhost:5000/projects", {
+        method: "GET",
+        headers: {
+          'Content-Type': 'application/json'
+        }
       })
-      .catch((err) => console.log(err))
+        .then((resp) => resp.json())
+        .then((data) => {
+          handleSetProjects(data)
+          setLoading(false)
+        })
+        .catch((err) => console.log(err))
+    }, 1000)
   }, [])
 
   projects.sort((a, b)=>b.id-a.id)
@@ -110,13 +115,22 @@ const Projects = () => {
         <h1>Não há projetos</h1>
       )
       */}
-      {filteredProjects.length > 0 ? (
+      {/*filteredProjects.length > 0 ? (
         filteredProjects.map((project)=>(
           <Project item={project} key={project.id} handleRemove={removeProject}/>
         ))
       ) : (
         <h1>Não há projetos</h1>
       )
+      */}
+      {loading==true ? <Loader/> : 
+        filteredProjects.length > 0 ? (
+          filteredProjects.map((project)=>(
+            <Project item={project} key={project.id} handleRemove={removeProject}/>
+          ))
+        ) : (
+          <h1>Não há projetos</h1>
+        )  
       }
     </div>
   )
