@@ -4,6 +4,8 @@ import styles from './NewProject.module.css'
 import ProjectForm from '../project/ProjectForm'
 import { useEffect, useState } from 'react'
 
+import AnimatedLinkButton from '../layout/AnimatedLinkButton'
+
 function NewProject() {
   const navigate = useNavigate()
   const [idCounter, setIdCounter] = useState(0)
@@ -69,6 +71,7 @@ function NewProject() {
 
   return (
     <div className={styles.newproject_container}>
+      <AnimatedLinkButton to="/projects" text ="Ver Projetos" type="see"/>
       <h1>Criar Projeto</h1>
       <p>Crie seu projeto para depois adicionar os serviços.</p>
       <ProjectForm handleSubmit={createPost} btnText="Criar Projeto"/>

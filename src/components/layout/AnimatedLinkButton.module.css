@@ -19,6 +19,10 @@
             transition: all ease 0.3s;
             background-color: hsl(0, 0%, 20%);
         }
+    }
+}
+.btn.add {
+    &:hover {
         svg {
             transform: rotate(90deg);
             transition: all ease 0.3s;
@@ -31,8 +35,23 @@
         }
     }
 }
+.btn.see {
+    &:hover {
+        svg {
+            transform: rotate(180deg);
+            transition: all ease 0.3s;
+        }
+    }
+    &:not(:hover) {
+        svg {
+            transform: rotate(-180deg);
+            transition: all ease 0.3s;
+        }
+    }
+}
 .btn p {
     transition: all ease 0.3s;
+    color: #efefef;
 }
 .btn .overlay {
     background-color: black;

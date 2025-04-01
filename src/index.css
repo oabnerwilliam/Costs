@@ -9,6 +9,8 @@ body, html, #root {
   background-color: #EFEFEF;
 }
 ::selection {
-  background-color: black;
-  color: gold
+  /*background-color: black;
+  color: gold*/
+  background-color: gold;
+  color: black;
 }

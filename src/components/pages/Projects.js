@@ -81,7 +81,7 @@ const Projects = () => {
       <div className={style.title}>
         <div className={style.title_add}>
           <h1>Meus Projetos</h1>
-          <AnimatedLinkButton to="/newproject" text="Novo Projeto"/>
+          <AnimatedLinkButton to="/newproject" text="Novo Projeto" type="add"/>
         </div>
         <SearchInput name="search" 
         placeholder="Pesquisar projeto" 

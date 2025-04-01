@@ -8,5 +8,6 @@
     transition: all .3s;
     &:hover {
         color: gold;
+        background-color: hsl(0, 0%, 20%);
     }
 }
