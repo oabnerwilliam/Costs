@@ -13,6 +13,7 @@
 .list li a {
     text-decoration: none;
     color: white;
+    transition: all ease 0.3s;
     &:hover {
         color: gold;
     }
