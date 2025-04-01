@@ -11,52 +11,12 @@
 .projects .title {
     display: flex;
     align-items: center;
-    gap: 1em;  
-}
-.projects .title a {
-    width: 162px;
-    height: 3em;
-    position: relative;
-    border-radius: 3em;
-    text-decoration: none;
-    color: #efefef;
-    display: flex;
     justify-content: space-between;
+    width: 100%; 
+}
+.projects .title .title_add {
+    display: flex;
     align-items: center;
-    padding: 0 1em;
-    overflow: hidden;
-    & svg, p {
-        z-index: 1;
-    }
-    &:hover {
-        .cobertura {
-            width: 100%;
-            transition: all ease 0.3s;
-            background-color: hsl(0, 0%, 20%);
-        }
-        svg {
-            transform: rotate(90deg);
-            transition: all ease 0.3s;
-        }
-    }
-    &:not(:hover) {
-        svg {
-            transform: rotate(-90deg);
-            transition: all ease 0.3s;
-        }
-    }
-}
-.projects .title a p {
-    transition: all ease 0.3s;
-}
-.projects .title a .cobertura {
-    background-color: black;
-    position: absolute;
-    width: 3em;
-    height: 100%;
-    left: 0;
-    top: 0;
-    overflow: hidden;
-    border-radius: inherit;
-    transition: all ease 0.3s;
+    justify-content: space-between;
+    gap: 1em;
 }

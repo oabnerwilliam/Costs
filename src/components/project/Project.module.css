@@ -16,7 +16,7 @@
 .project .actions {
     justify-content: center;
 }
-.project .actions a {
+.project .actions a, .project .actions button {
     text-decoration: none;
     color: black;
     text-align: center;
@@ -24,9 +24,12 @@
     transition: all ease 0.3s;
     padding: .5em;
     border-radius: .5em;
+    border: none;
+    background-color: inherit;
     &:hover {
         background-color: white;
         color: black;
+        cursor: pointer;
     }
 }
 .project div {

@@ -2,10 +2,12 @@ import React from 'react'
 import styles from './Input.module.css'
 import Cleave from 'cleave.js/react'
 
-function Input({type, text, name, placeholder, handleOnChange, value}) {
+function Input({type, text, name, placeholder, handleOnChange}) {
   return(
     <div className={styles.form_container}>
-        <label htmlFor={name}>{text}</label>
+        {text && (
+          <label htmlFor={name}>{text}</label>
+        )}
         {type=='number'?(
           <Cleave 
           options={{

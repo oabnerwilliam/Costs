@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Project.module.css'
 import { Navigate, useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
@@ -6,9 +6,16 @@ import { Link } from 'react-router-dom'
 import { BsPencil, BsFillTrashFill } from 'react-icons/bs'
 import { FaPlus } from 'react-icons/fa'
 
-function Project({ item, handleRemove }) {
-  const navigate = useNavigate()
+import ReactModal from 'react-modal'
 
+function Project({ item, handleRemove }) {
+  const [isOpen, setIsOpen] = useState(false)
+  
+  const remove = (e) => {
+    e.preventDefault()
+    handleRemove(item.id)
+  }
+  
   return (
     <>
         <Link className={style.project} to={`/projectpage/${item.id}`}>
@@ -22,10 +29,10 @@ function Project({ item, handleRemove }) {
               <BsPencil/>
               <p>Editar</p>
             </Link>
-            <Link to="/">
+            <button onClick={remove}>
               <BsFillTrashFill/>
               <p>Excluir</p>
-            </Link>
+            </button>
           </div>
         </Link>
     </>
