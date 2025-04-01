@@ -10,6 +10,7 @@ const SearchInput = ({name, placeholder, handleOnChange, setIsOpen, isOpen}, ref
 
   const openSearch = (e) => {
     setIsOpen(true)
+    searchRef.current.focus()
   }
   
   return (
@@ -24,7 +25,8 @@ const SearchInput = ({name, placeholder, handleOnChange, setIsOpen, isOpen}, ref
         id={name} 
         onChange={handleOnChange}
         className={style.input}
-        placeholder={placeholder}/> 
+        placeholder={placeholder}
+        ref={searchRef}/> 
     </div>
   )
 }

@@ -79,16 +79,17 @@ const Projects = () => {
   return(
     <div className={style.projects}>
       <div className={style.title}>
-        <div className={style.title_add}>
-          <h1>Meus Projetos</h1>
+        <h1>Meus Projetos</h1>
+        <div className={style.add_search}>
           <AnimatedLinkButton to="/newproject" text="Novo Projeto" type="add"/>
+          <SearchInput name="search" 
+          placeholder="Pesquisar projeto" 
+          handleOnChange={pesquisarProjeto}
+          ref={searchInputRef}
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}/>  
         </div>
-        <SearchInput name="search" 
-        placeholder="Pesquisar projeto" 
-        handleOnChange={pesquisarProjeto}
-        ref={searchInputRef}
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}/>
+        
         {/*<Input type="text" name="pesquisaProjeto" placeholder="Pesquisar projeto" handleOnChange={pesquisarProjeto} value=""/>*/}
       </div>
       {message && (
