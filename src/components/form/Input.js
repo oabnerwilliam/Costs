@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Input.module.css'
 import Cleave from 'cleave.js/react'
 
-function Input({type, text, name, placeholder, handleOnChange}) {
+function Input({type, text, name, placeholder, handleOnChange, value}) {
   return(
     <div className={styles.form_container}>
         {text && (
@@ -19,6 +19,7 @@ function Input({type, text, name, placeholder, handleOnChange}) {
           id={name} 
           placeholder={placeholder}
           onChange={handleOnChange}
+          value={value||''}
           required/>
         ):(
           <input className={styles.input} 
@@ -27,6 +28,7 @@ function Input({type, text, name, placeholder, handleOnChange}) {
           id={name} 
           placeholder={placeholder}
           onChange={handleOnChange}
+          value={value||''}
           required/>
         )}
     </div>

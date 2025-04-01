@@ -10,6 +10,10 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
   const [categories, setCategories] = useState([])
   const [project, setProject] = useState(projectData || {})
 
+  useEffect(()=>{
+    setProject(projectData)
+  }, [projectData])
+
   useEffect(() => {
     fetch("http://localhost:5000/categories", {
       method: "GET",
@@ -60,7 +64,7 @@ function ProjectForm({handleSubmit, btnText, projectData}) {
       placeholder="Insira o nome do projeto" 
       name="name"
       handleOnChange={handleChange}
-      value={project.projectName ? project.projectName : ''}/>
+      value={project.name ? project.name : ''}/>
       <Input type="number" 
       text="Orçamento do projeto:" 
       placeholder="Insira o orçamento do projeto" name="budget"

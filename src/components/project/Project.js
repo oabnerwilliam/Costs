@@ -25,7 +25,7 @@ function Project({ item, handleRemove }) {
             <p>Orçamento: R${item.budget}</p>
           </div>
           <div className={style.actions}>
-            <Link to="/">
+            <Link to={`/projectpage/${item.id}`} state={{edit: true}}>
               <BsPencil/>
               <p>Editar</p>
             </Link>
