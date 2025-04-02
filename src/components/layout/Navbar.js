@@ -20,12 +20,6 @@ function Navbar() {
                     <li>
                         <Link to="projects">Projetos</Link>
                     </li>
-                    {/* <li>
-                        <Link to="company" >Empresa</Link>
-                    </li>
-                    <li>
-                        <Link to="contact">Contato</Link>
-                    </li> */}
                 </ul>
             </Container>
         </nav>
