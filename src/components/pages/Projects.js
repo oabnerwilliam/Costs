@@ -42,6 +42,10 @@ const Projects = () => {
     }, 1000)
   }, [])
 
+  useEffect(()=>{
+    setFilteredProjects(projects)
+  }, [projects])
+
   projects.sort((a, b)=>b.id-a.id)
 
   const removeProject = (id) => {
@@ -64,11 +68,12 @@ const Projects = () => {
         <h1>Meus Projetos</h1>
         <div className={style.add_search}>
           <AnimatedLinkButton to="/newproject" text="Novo Projeto" type="add"/>
-          <HandleSearch list={projects}
+        <HandleSearch 
+          list={projects}
           setSearchText={setSearchText}
           searchText={searchText}
           placeholder="Pesquisar projeto"
-          setFiltered={setFilteredProjects}/>  
+          setFiltered={setFilteredProjects}/>
         </div>
       </div>
       {message && (
