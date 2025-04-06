@@ -12,12 +12,6 @@ const HandleSearch = ({list, setSearchText, searchText, placeholder, setFiltered
             ))    
         }
     }, [searchText])
-    
-    /*const filteredList = React.useMemo(() => 
-        list.filter((item) =>
-            item.name.toLowerCase().includes(searchText.toLowerCase())
-        ), [list, searchText]
-    );*/
 
     useEffect(() => {
         setFiltered(filteredList);

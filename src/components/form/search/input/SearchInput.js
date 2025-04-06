@@ -14,7 +14,6 @@ const SearchInput = ({placeholder, handleOnChange}) => {
     if (!searchRef.current.contains(e.target)) {
       setIsOpen(false)  
     }
-    
   }
 
   useEffect(()=>{
