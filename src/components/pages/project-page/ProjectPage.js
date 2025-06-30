@@ -5,16 +5,16 @@ import { useEffect } from 'react'
 
 import style from './ProjectPage.module.css'
 
-import Loader from '../layout/Loader'
-import AnimatedLinkButton from '../layout/AnimatedLinkButton'
+import Loader from '../../layout/Loader'
+import AnimatedLinkButton from '../../layout/AnimatedLinkButton'
 import { FaPencil, FaX } from 'react-icons/fa6'
 
-import Input from '../form/Input'
-import Select from '../form/Select'
-import SubmitButton from '../form/SubmitButton'
+import Input from '../../form/Input'
+import Select from '../../form/Select'
+import SubmitButton from '../../form/SubmitButton'
 
-import ProjectForm from '../project/ProjectForm'
-import Message from '../layout/Message'
+import ProjectForm from '../../project/ProjectForm'
+import Message from '../../layout/Message'
 
 function ProjectPage() {
     const {id} = useParams()

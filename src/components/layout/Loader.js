@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from 'react'
 import loading from '../../img/loading.svg'
 import style from './Loader.module.css'
 

@@ -1,10 +1,10 @@
 import { useNavigate } from 'react-router-dom'
 
 import styles from './NewProject.module.css'
-import ProjectForm from '../project/ProjectForm'
+import ProjectForm from '../../project/ProjectForm'
 import { useEffect, useState } from 'react'
 
-import AnimatedLinkButton from '../layout/AnimatedLinkButton'
+import AnimatedLinkButton from '../../layout/AnimatedLinkButton'
 
 function NewProject() {
   const navigate = useNavigate()
@@ -25,7 +25,6 @@ function NewProject() {
   }, [])
 
   function createPost(project) {
-    //initialize cost and services
     project.cost = 0
     project.services = []
     project.id = idCounter.toString()
@@ -38,11 +37,10 @@ function NewProject() {
       body: JSON.stringify(project)
     })
       .then(resp => resp.json())
-      .then((data)=> {
+      .then(()=> {
         const newId = idCounter + 1
         setIdCounter(newId)
         updateIdCounter(newId)
-        //redirect
         const state = {message: 'Projeto criado com sucesso!'}
         navigate("/projects", {state})
       })
